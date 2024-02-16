@@ -1,0 +1,143 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: linen;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#moves-container {
+  height: 600px;
+  width: 260px;
+  overflow: auto;
+  background-color: #abc;
+  border-radius: 15px;
+}
+
+#towers {
+  width: 395px;
+  height: 200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tower {
+  width: 115px;
+  height: 117px;
+  border-bottom: 5px solid #000000;
+  border-radius: 7px;
+  position: relative;
+  padding: 0;
+  margin: 0 25px 0 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  cursor: pointer;
+}
+.tower#tower-3 {
+  margin: 0;
+}
+.tower:before {
+  width: 4px;
+  height: 116px;
+  content: "";
+  display: block;
+  background: #000000;
+  position: absolute;
+  bottom: -2px;
+  left: calc(50% - 2px);
+  z-index: 10;
+  border-radius: 30px;
+}
+
+.disk {
+  list-style: none;
+  height: 16px;
+  min-height: 16px;
+  display: block;
+  border-radius: 9px;
+  font-size: 0;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  margin-bottom: 0;
+}
+.disk.hold {
+  margin-bottom: 100px;
+  transition: all 0.2s ease;
+}
+.disk.right {
+  transform: translateX(-50%);
+  transition: all 0.2s ease;
+}
+.disk.left {
+  transform: translateX(50%);
+  transition: all 0.2s ease;
+}
+
+.disk-1 {
+  width: 17.5px;
+  background-color: #e91e63;
+}
+
+.disk-2 {
+  width: 35px;
+  background-color: #673ab7;
+}
+
+.disk-3 {
+  width: 52.5px;
+  background-color: #3f51b5;
+}
+
+.disk-4 {
+  width: 70px;
+  background-color: #00bcd4;
+}
+
+.disk-5 {
+  width: 87.5px;
+  background-color: #8bc34a;
+}
+
+.disk-6 {
+  width: 105px;
+  background-color: #ffc107;
+}
+
+.disk-7 {
+  width: 122.5px;
+  background-color: #ff9800;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

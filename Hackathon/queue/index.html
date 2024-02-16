@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Visualize Queue Data Structure</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+
+    ~ ABHINAV ~ 
+    
+    • QUEUE DS •
+    
+    Thank You all.😊
+   
+    < 🌏 >
+        < 🌦️ >
+           < 🌈 >
+           < 🌱 >
+           < 🐰 >
+        < ⛹️ >
+        < 👨‍💻 >
+        < 💞 >
+    < 🤗 >
+            
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="queue.css">
+    <title>Queue</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="queue-cnt" id="queue-cnt">
+            <!-- Data will be added here -->
+            <!-- <div class="data" id="data0">455 <span class="index">0</span></div> -->
+        </div>
+
+        
+        
+        <div class="front-rear-cnt">
+            <div class="front-cnt">Front : <span class="front-val" id="front-val"> -1 </span></div>
+            <div class="rear-cnt">Rear : <span class="rear-val" id="rear-val"> -1 </span></div>
+        </div>
+        
+        <div class="capacity-cnt">
+            <input type="number" placeholder="capacity" id="capacity"> 
+            <button id="setcapbtn" onclick="setCapacity()">Set</button>
+
+            <button id="clearqueue" onclick="clearQueue()">Clear</button>
+        </div>
+
+
+        <div class="operations-btn-cnt">
+
+            <button onclick="enqueue()" id="enqueue">Enqueue</button>
+            <button onclick="dequeue()" id="dequeue">Dequeue</button>
+            <button onclick="peek()" id="peek">Peek</button>
+            <button onclick="isEmpty()" id="isempty">Is Empty</button>
+            <button onclick="isFull()" id="isfull">Is Full</button>
+
+        </div>
+        <div class="output" id="output">
+            <div class="output-enqueue-set-cap" style="font-size: 20px;"> You need to set the capacity before enqueue operation.</div>
+        </div>
+
+    </div>
+
+    <script src="queue.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

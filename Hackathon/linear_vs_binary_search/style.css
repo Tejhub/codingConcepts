@@ -1,0 +1,92 @@
+@font-face ("OperatorMono-Bold" "https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Bold");
+@font-face ("OperatorMono-Medium" "https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Medium");
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+body {
+  background: #3BB0FF;
+  text-align: center;
+  font-family: "OperatorMono-Medium", "Lucida Console", Monaco, monospace;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFF32B;
+  font-family: "OperatorMono-Bold", "Lucida Console", Monaco, monospace;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+input#random-letter {
+  text-align: center;
+  width: 1em;
+  border: none;
+  border-bottom: 5px solid white;
+  padding-bottom: 0.2em;
+  text-transform: uppercase;
+  background: #3BB0FF;
+  font-size: 3em;
+  font-family: "OperatorMono-Medium", "Lucida Console", Monaco, monospace;
+  color: white;
+}
+input#random-letter.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+input#random-letter:focus {
+  outline: none;
+}
+
+button {
+  text-align: center;
+  border: none;
+  background: #3BB0FF;
+  border: 5px solid #FFF32B;
+  color: #FFF32B;
+  font-size: 30px;
+  font-family: "OperatorMono-Bold", "Lucida Console", Monaco, monospace;
+  padding: 0.15em 1.3em;
+  margin: 1em;
+  transition: border-color 0.2s, color 0.2s;
+  -webkit-transition: border-color 0.2s, color 0.2s;
+}
+button:hover {
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
+.searches .linear-search, .searches .binary-search {
+  display: inline-block;
+}
+
+ul.data {
+  padding: 0;
+  margin: 1em;
+  margin-top: 0;
+}
+ul.data li {
+  display: inline-block;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+ul.data li.exempt {
+  color: #FF014E;
+  border-bottom: 2px solid #FF014E;
+}
+ul.data li.found {
+  color: #66FF00;
+  border-bottom: 2px solid #66FF00;
+}

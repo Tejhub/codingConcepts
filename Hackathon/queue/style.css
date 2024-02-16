@@ -1,0 +1,242 @@
+/* ABHINAV */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+body {
+    overflow: hidden;
+}
+.main{
+    margin-top: 10px;
+}
+
+.queue-cnt{
+    height: 100px;
+    display: flex;
+    place-items: center;
+    background-image: linear-gradient(-285deg, rgba(88, 88, 88, 0.048), rgba(200, 200, 200, 0.219));
+    overflow: auto;
+    overflow-y: hidden; 
+}
+
+
+.queue-cnt > div {
+    text-align: center;
+    height: 50px;
+    min-width: 50px;
+    padding-left: 13px;
+    padding-right: 5px;
+    background-color:#6bb5ff;
+    color: #fcfefd;
+    flex: 0 0 auto;
+    margin: 10px 5px 10px 5px;
+    padding-top: 10px;
+    font-size: 27px;
+    font-weight: 400;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    border-radius: 7px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+
+
+.queue-cnt::-webkit-scrollbar {
+    height: 3px;
+    border-radius: 10px;
+}
+
+.queue-cnt::-webkit-scrollbar-thumb {
+    background-color: rgb(192, 192, 192);
+    
+}
+
+.front-rear-cnt{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.front-cnt{
+    padding-right: 40vw;
+}
+
+.operations-btn-cnt{
+    margin: 40px 5vw 40px 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+button{
+    cursor: pointer;
+    height: 40px;
+    width: 25vw;
+    font-size: 1.1em;
+    border: none;
+    background-color: #ff141452;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 200ms linear;
+} 
+
+button:hover{
+/*   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
+  background-color: lightgrey;
+}
+
+
+#setcapbtn, #clearqueue{
+    cursor: pointer;
+    height: 40px;
+    width: 17vw;
+    font-size: 1.1em;
+    border: none;
+    background-color: #ff141452;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#clearqueue{
+    background-color: #145aff52;
+}
+
+
+.output{
+    display: inline-block;
+    background-color: #bbbbbb47;
+    height: 350px;
+    width: 60vw;
+    position: relative;
+    top: -332px;
+    left: 35vw;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 15px 25px, rgb(0 0 0 / 5%) 0px 5px 10px;
+    /* font-family: 'Varela Round', sans-serif; */
+    /* font-weight: 800; */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.output-head-op{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+input{
+    height: 40px;
+    width: 40vw;
+    margin-left: 10vw;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+input::placeholder{
+    font-size: 1.0em;
+}
+
+.done{
+    margin-top: 30px;
+    margin-left: 18vw;
+}
+
+.description{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.expand{
+    animation-name: expandBTN;
+    animation-duration: 180ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandBTN {
+    0%{width: 25vw; border-radius: 5px 0 0 5px;}
+    25%{width: 26vw; border-radius: 10px 0 0 10px;}
+    50%{width: 28vw; border-radius: 15px 0 0 15px;}
+    75%{width: 29vw; border-radius: 18px 0 0 18px;}
+    100%{width: 30vw; border-radius: 20px 0 0 20px;}
+}
+
+.resize{
+    animation-name: resizeBTN;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes resizeBTN {
+    0%{width: 30vw; border-radius: 20px 0 0 20px;}
+    25%{width: 28vw; border-radius: 18px 1px 1px 18px;}
+    50%{width: 27vw; border-radius: 15px 2px 2px 15px;}
+    75%{width: 26vw; border-radius: 10px 3px 3px 10px;}
+    100%{width: 25vw; border-radius: 5px 5px 5px 5px;}
+}
+
+.done{
+    background-color: #deb8879c;
+}
+
+.output-isfull-yes-no{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 70px;
+}
+
+.output-secondary-details{
+    text-align: initial;
+    margin: 10px 20px 0px 20px;
+}
+
+.output-enqueue-set-cap{
+    text-align: center;
+    margin-top: 90px;
+}
+
+.output-enqueue-overflow, .output-dequeue-overflow{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.index{
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    top: -42px;
+    left: -5px;
+    color: black;
+}
